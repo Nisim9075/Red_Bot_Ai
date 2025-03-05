@@ -140,6 +140,25 @@
             transform: translateX(5px);
         }
 
+        .input-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* סגנון כפתור לניקוי שיחה */
+        .clear-chat-button {
+            padding: 12px 20px;
+            background-color: #ff4747;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .clear-chat-button:hover {
+            background-color: #e03e3e;
+        }
+
         @media screen and (max-width: 768px) {
             #chat-box {
                 max-width: 100%;
@@ -169,6 +188,7 @@
         <input type="text" id="user-input" placeholder="Type your message...">
         <button onclick="sendMessage()">Send</button>
         <button onclick="startVoiceRecognition()">🎤</button> <!-- כפתור להקלטת קול -->
+        <button class="clear-chat-button" onclick="clearChat()">Clear Chat</button> <!-- כפתור לניקוי שיחה -->
     </div>
 
     <script>
@@ -230,6 +250,11 @@
             recognition.onerror = function(event) {
                 console.error("Error occurred in speech recognition: " + event.error);
             };
+        }
+
+        // פונקציה לניקוי השיחה
+        function clearChat() {
+            document.getElementById("chat-box").innerHTML = ""; // מנקה את כל השיחה
         }
     </script>
 </body>
