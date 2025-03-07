@@ -1,0 +1,11 @@
+flask
+flask-socketio
+sqlalchemy
+tensorflow
+keras
+scikit-learn
+numpy
+pandas
+nltk
+requests
+TextBlob
